@@ -18,7 +18,11 @@ class HomePage extends StatelessWidget {
           )),
           child: Center(
             child: Column(mainAxisSize: MainAxisSize.min, children: [
-              Image.asset('assets/images/quiz-logo.png', width: 250),
+              Image.asset(
+                'assets/images/quiz-logo.png',
+                width: 250,
+                color: Color.fromARGB(157, 255, 255, 255),
+              ),
               const SizedBox(
                 height: 60,
               ),
@@ -32,13 +36,15 @@ class HomePage extends StatelessWidget {
               const SizedBox(
                 height: 20,
               ),
-              TextButton(
+              OutlinedButton.icon(
+                  icon: const Icon(Icons.play_circle_filled_rounded),
                   onPressed: () {},
-                  child: const Text(
+                  style: OutlinedButton.styleFrom(
+                    foregroundColor: Colors.white,
+                    backgroundColor: Colors.blueAccent,
+                  ),
+                  label: const Text(
                     'Start Quiz',
-                    style: TextStyle(
-                      color: Colors.white,
-                    ),
                   ))
             ]),
           )),
