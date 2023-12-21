@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 class AnswerButton extends StatelessWidget {
   const AnswerButton(this.label, {super.key, required this.onTap});
@@ -19,7 +20,14 @@ class AnswerButton extends StatelessWidget {
           shape: RoundedRectangleBorder(
             borderRadius: BorderRadius.circular(13),
           )),
-      child: Text(label ?? defaultLabel),
+      child: Text(
+        label ?? defaultLabel,
+        textAlign: TextAlign.center,
+        style: GoogleFonts.ubuntuMono(
+          fontSize: 16,
+          fontWeight: FontWeight.bold,
+        ),
+      ),
     );
   }
 }
