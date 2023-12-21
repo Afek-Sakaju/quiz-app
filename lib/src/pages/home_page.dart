@@ -27,7 +27,8 @@ class HomePage extends StatelessWidget {
         ),
         OutlinedButton.icon(
             icon: const Icon(Icons.play_circle_filled_rounded),
-            onPressed: () {},
+            onPressed: () {
+            },
             style: OutlinedButton.styleFrom(
               foregroundColor: Colors.white,
               backgroundColor: Colors.blueAccent,
