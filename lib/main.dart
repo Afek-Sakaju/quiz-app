@@ -11,8 +11,20 @@ class MainApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const MaterialApp(
-      home: HomePage(),
+    return MaterialApp(
+      home: Scaffold(
+        body: Container(
+            decoration: const BoxDecoration(
+                gradient: LinearGradient(
+              colors: [
+                Color.fromARGB(255, 64, 112, 175),
+                Color.fromARGB(255, 84, 126, 180),
+              ],
+              begin: Alignment.topLeft,
+              end: Alignment.bottomRight,
+            )),
+            child: const HomePage()),
+      ),
     );
   }
 }
