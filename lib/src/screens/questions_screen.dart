@@ -48,7 +48,7 @@ class _QuestionsScreenState extends State<QuestionsScreen> {
             const SizedBox(
               height: 40,
             ),
-            ...currentQuestion.getShuffledAnswers().map((answerText) {
+            ...currentQuestion.shuffledAnswers.map((answerText) {
               return Column(
                 crossAxisAlignment: CrossAxisAlignment.stretch,
                 children: [
