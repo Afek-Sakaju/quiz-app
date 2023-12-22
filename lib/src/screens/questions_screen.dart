@@ -35,7 +35,6 @@ class _QuestionsScreenState extends State<QuestionsScreen> {
         margin: const EdgeInsets.all(60),
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
-          crossAxisAlignment: CrossAxisAlignment.stretch,
           children: [
             Text(
               currentQuestion.question,
@@ -47,12 +46,20 @@ class _QuestionsScreenState extends State<QuestionsScreen> {
               textAlign: TextAlign.center,
             ),
             const SizedBox(
-              height: 30,
+              height: 40,
             ),
             ...currentQuestion.getShuffledAnswers().map((answerText) {
-              return AnswerButton(
-                answerText,
-                onTap: () => answerQuestion(answerText),
+              return Column(
+                crossAxisAlignment: CrossAxisAlignment.stretch,
+                children: [
+                  AnswerButton(
+                    answerText,
+                    onTap: () => answerQuestion(answerText),
+                  ),
+                  const SizedBox(
+                    height: 10, // Adjust this value to set the desired spacing
+                  ),
+                ],
               );
             })
           ],
