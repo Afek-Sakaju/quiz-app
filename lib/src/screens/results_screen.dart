@@ -41,13 +41,34 @@ class ResultsScreen extends StatelessWidget {
           children: [
             Text(
               'You have answered $correctQuestions out of $totalQuestions questions correctly!',
+              style: TextStyle(
+                color: Colors.indigo.shade50,
+                fontSize: 20,
+              ),
+              textAlign: TextAlign.center,
             ),
             const SizedBox(height: 30),
             QuestionsSummary(summaryData: summaryData),
             const SizedBox(height: 30),
-            TextButton(
-              onPressed: () {},
-              child: const Text('Restart Quiz!'),
+            SizedBox(
+              height: 40,
+              child: FloatingActionButton.extended(
+                icon: Icon(
+                  Icons.restart_alt,
+                  color: Colors.indigo.shade50,
+                  size: 24,
+                ),
+                onPressed: () {},
+                label: Text(
+                  'Restart Quiz!',
+                  style: TextStyle(
+                    color: Colors.indigo.shade50,
+                    fontSize: 16,
+                  ),
+                ),
+                backgroundColor: const Color.fromARGB(255, 64, 112, 175),
+                extendedPadding: const EdgeInsets.all(11),
+              ),
             ),
           ],
         ),
