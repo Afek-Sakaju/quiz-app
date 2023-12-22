@@ -66,7 +66,7 @@ class ResultsScreen extends StatelessWidget {
                     fontSize: 16,
                   ),
                 ),
-                backgroundColor: const Color.fromARGB(255, 64, 112, 175),
+                backgroundColor: const Color.fromARGB(255, 126, 156, 198),
                 extendedPadding: const EdgeInsets.all(11),
               ),
             ),
