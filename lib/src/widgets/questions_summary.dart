@@ -13,8 +13,10 @@ class QuestionsSummary extends StatelessWidget {
         child: Column(
           children: summaryData.map((data) {
             return Row(
+              crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 Container(
+                  margin: const EdgeInsets.only(right: 20),
                   decoration: BoxDecoration(
                     shape: BoxShape.circle,
                     color: data['user_answer'] == data['correct_answer']
@@ -28,8 +30,15 @@ class QuestionsSummary extends StatelessWidget {
                 ),
                 Expanded(
                   child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
-                      Text(data['question'] as String),
+                      Text(
+                        data['question'] as String,
+                        style: const TextStyle(
+                          color: Colors.white,
+                          fontSize: 17,
+                        ),
+                      ),
                       const SizedBox(height: 5),
                       Text(data['user_answer'] as String),
                       Text(data['correct_answer'] as String),
