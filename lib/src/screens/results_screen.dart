@@ -29,7 +29,7 @@ class ResultsScreen extends StatelessWidget {
     final List<Map<String, Object>> summaryData = getSummaryData();
     final int totalQuestions = questionsData.length;
     final int correctQuestions = summaryData.where((data) {
-      return data['corrcet_answer'] == data['user_answer'];
+      return data['correct_answer'] == data['user_answer'];
     }).length;
 
     return SizedBox(
